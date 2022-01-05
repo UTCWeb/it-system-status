@@ -1,0 +1,53 @@
+/*
+ Theme Name:   System Status - WP Knowledge Base Child
+ Theme URI:    http://ipanelthemes.com/kb/wp-knowledge-base-theme/
+ Author:       Weston Gentry
+ Template:     wp-knowledge-base
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  wp-knowledge-base-child
+*/
+
+#content h1, #content h2, #content h3, #content p, .widget-title, .textwidget p, .list-group a {
+	/* color: #00386b !important; */
+}
+
+.widget-title {
+	text-align: left;
+}
+
+
+.breadcrumb {
+	margin: 40px 0 20px 0px;
+}
+
+.entry-meta {
+	display:none !important;
+}
+
+.author-meta {
+	display: none !important;
+}
+.kb-post-list .badge { 
+	display: none;
+}
+.ipt_kb_like_article_info {
+	display: none;
+}
+.ipt_kb_like_article {
+	display: none !important;
+}
+#nav-below {
+	display: none;
+}
+.ipt-icon-file {
+	display: none !important;
+}
+
+.alert-secondary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
