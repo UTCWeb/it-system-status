@@ -11,9 +11,4 @@ function my_theme_enqueue_styles() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-
-//Increase upload file size
-@ini_set( ‘upload_max_size’ , ‘100M’ );
-
-
 ?>
