@@ -121,7 +121,7 @@ $main_categories = get_categories( array(
 					  case "System Issues/Outage":
 						echo "panel-danger";
 						break;
-					  case "Problems Detected":
+					  case "Classroom Outages":
 						echo "panel-warning";
 						break;
 					  case "System Maintenance":
@@ -140,7 +140,7 @@ $main_categories = get_categories( array(
                   case "System Issues/Outage":
                     echo "<i class='glyphicon glyphicon-remove-circle'></i> ";
                     break;
-                  case "Problems Detected":
+                  case "Classroom Outages":
                     echo "<i class='glyphicon glyphicon-exclamation-sign'></i> ";
                     break;
                   case "System Maintenance":
