@@ -30,7 +30,7 @@
 					  case "System Issues/Outage":
 						echo "alert alert-danger";
 						break;
-					  case "Problems Detected":
+					  case "Classroom Outages":
 						echo "alert alert-warning";
 						break;
 					  case "System Maintenance":
