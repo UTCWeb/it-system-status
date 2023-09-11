@@ -33,6 +33,9 @@
 					  case "Classroom Outages":
 						echo "alert alert-warning";
 						break;
+            case "Resolved":
+            echo "alert alert-secondary";
+            break;
 					  case "System Maintenance":
 						echo "alert alert-secondary";
 						break;
