@@ -25,7 +25,8 @@ $main_categories = get_categories( array(
     <?php $term_meta = get_option( 'ipt_kb_category_meta_' . $cat->term_id, array() ); ?>
     <?php $term_link = esc_url( get_term_link( $cat ) ); ?>
     <?php $pcat_totals = ipt_kb_total_cat_post_count( $cat->term_id ); ?>
-    <?php if ($cat->name == "Announcements") { ?>
+    <?php $cat_name = $cat->name; ?>
+    <?php if ($cat_name == "Announcements") { ?>
     <div class="row kb-home-cat-row">
       <div class="col-md-12">
         <div class="col-sm-12">
@@ -89,7 +90,7 @@ $main_categories = get_categories( array(
                 <?php get_template_part( 'category-templates/content', 'popular' ); ?>
                 <?php endwhile; ?>
                 <?php else : ?>
-                <?php get_template_part( 'category-templates/no-result' ); ?>
+                  <?php get_template_part( 'category-templates/no-result', '', array( 'cat_name' => $cat_name ) ); ?>
                 <?php endif; ?>
                 <?php wp_reset_query(); ?>
                 <?php endif; ?>
@@ -110,7 +111,8 @@ $main_categories = get_categories( array(
       <?php $term_meta = get_option( 'ipt_kb_category_meta_' . $cat->term_id, array() ); ?>
       <?php $term_link = esc_url( get_term_link( $cat ) ); ?>
       <?php $pcat_totals = ipt_kb_total_cat_post_count( $cat->term_id ); ?>
-      <?php if (($cat->name != "Announcements") && ($cat->name != "Resolved")) { ?>
+      <?php $cat_name = $cat->name; ?>
+      <?php if (($cat_name != "Announcements") && ($cat_name != "Resolved")) { ?>
       <div class="col-md-6">
         <div class="col-sm-12">
           <div class="panel 
@@ -212,7 +214,8 @@ $main_categories = get_categories( array(
                 <?php get_template_part( 'category-templates/content', 'popular' ); ?>
                 <?php endwhile; ?>
                 <?php else : ?>
-                <?php get_template_part( 'category-templates/no-result' ); ?>
+                  <?php $no_result_args = array( 'cat_name' => $cat_name ); ?>
+                  <?php get_template_part( 'category-templates/no-result', '', array( 'cat_name' => $cat_name ) ); ?>
                 <?php endif; ?>
                 <?php wp_reset_query(); ?>
                 <?php endif; ?>
@@ -231,7 +234,8 @@ $main_categories = get_categories( array(
     <?php $term_meta = get_option( 'ipt_kb_category_meta_' . $cat->term_id, array() ); ?>
     <?php $term_link = esc_url( get_term_link( $cat ) ); ?>
     <?php $pcat_totals = ipt_kb_total_cat_post_count( $cat->term_id ); ?>
-    <?php if ($cat->name == "Resolved") { ?>
+    <?php $cat_name = $cat->name; ?>
+    <?php if ($cat_name == "Resolved") { ?>
     <div class="row kb-home-cat-row">
       <div class="col-md-12">
         <div class="col-sm-12">
@@ -295,7 +299,8 @@ $main_categories = get_categories( array(
                 <?php get_template_part( 'category-templates/content', 'popular' ); ?>
                 <?php endwhile; ?>
                 <?php else : ?>
-                <?php get_template_part( 'category-templates/no-result' ); ?>
+                  <?php $no_result_args = array( 'cat_name' => $cat_name ); ?>
+                  <?php get_template_part( 'category-templates/no-result', '', array( 'cat_name' => $cat_name ) ); ?>
                 <?php endif; ?>
                 <?php wp_reset_query(); ?>
                 <?php endif; ?>

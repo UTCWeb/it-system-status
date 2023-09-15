@@ -5,7 +5,7 @@
 ?>
 <div class="list-group-item text-muted"> <span class="glyphicon ipt-icon-blocked"></span>
   <?php
-  switch ( $cat->name ) {
+  switch ( $args['cat_name'] ) {
     case "Announcements":
       _e( 'No Announcements.', 'ipt_kb' );
       break;
@@ -18,6 +18,9 @@
     case "Problems Detected":
       _e( 'No Problems Detected.', 'ipt_kb' );
       break;
+    case "Resolved":
+        _e( 'No Recently Resolved Issues.', 'ipt_kb' );
+        break; 
     case "System Maintenance":
       _e( 'No System Maintenance.', 'ipt_kb' );
       break;
