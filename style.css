@@ -3,15 +3,29 @@
  Theme URI:    http://ipanelthemes.com/kb/wp-knowledge-base-theme/
  Author:       Weston Gentry
  Template:     wp-knowledge-base
- Version:      1.0.3
+ Version:      2.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  wp-knowledge-base-child
 */
 
-#content h1, #content h2, #content h3, #content p, .widget-title, .textwidget p, .list-group a {
-	/* color: #00386b !important; */
+:root {
+	--dkblue: #112e51;
+	--ltblue: #e7eaee;
+	--gold: #fdb736;
+	--dkgold: #725218;
+	--ltgray: #a0aec0;
+	--links: #166484;
+	--bodycopy: #0f2949;
+	--pagebg: #f9f9f9;
+	--utc-transition: .4s ease-in-out;
+}
+
+body {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: Roboto,sans-serif;
 }
 
 .widget-title {
@@ -50,4 +64,121 @@
     color: #383d41;
     background-color: #e2e3e5;
     border-color: #d6d8db;
+}
+
+/* New Branding Updates */
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 500;
+	margin-top: 24px;
+	font-family: Oswald,sans-serif!important;
+	color: var(--dkblue)!important;
+}
+
+header {
+	width: 100%;
+    background: #fff;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 1px 3px 5px -1px #000;
+    margin-bottom: 1rem;
+    z-index: 1000;
+    outline: 0;
+}
+
+.wrap {
+	margin: 0 auto;
+}
+
+.header-first-row {
+    background: #e7eaee;
+    display: flex;
+    align-content: center;
+    padding: 6px 12px;
+	padding-bottom: 10px !important;
+	outline: 0;
+}
+
+.title-area svg {
+    max-width: 300px;
+    max-height: 48px;
+}
+
+#department-footer {
+    padding-top: 1.2rem!important;
+    padding-bottom: 1.2rem!important;
+    background: var(--ltblue);
+    text-align: center;
+}
+
+#department-footer h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.fa-2x {
+    font-size: 2em;
+}
+
+.fa-layers, .svg-inline--fa {
+    vertical-align: -0.125em;
+    height: 1em;
+}
+
+#social-footer a svg.fa-2x, a {
+    transition: var(--utc-transition);
+}
+
+#social-footer a svg.fa-2x:hover {
+    color: var(--gold);
+    transform: scale(1.5);
+}
+
+.footer-copyright-container {
+    background-color: var(--dkblue);
+    padding: 2rem 1rem!important;
+}
+
+.footer-copyright-container p {
+    color: #fff;
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+#footer-widgets {
+	text-align: left;
+}
+
+.footer-copyright {
+    padding-bottom: 6px!important;
+}
+
+.footer-copyright-container ul {
+    padding: 0 24px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.footer-copyright-container li {
+    display: inline;
+    font-size: 16px;
+    padding: 9px;
+}
+
+.footer-copyright-container li a {
+    text-decoration: none;
+    color: #fff!important;
+}
+
+a.footer-link {
+    color: var(--gold)!important;
+    transition: var(--utc-transition);
+    text-decoration: none;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+a.footer-link:hover {
+    color: #fff!important;
 }
